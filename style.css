@@ -1,11 +1,313 @@
 *{
     margin: 0;
     padding: 0;
-    max-width: 1500px;
     box-sizing: border-box;
-    background: black;
 }
 
 body{
     margin: 0 auto;
+    background: black;
+    color: white;
+    max-width: 1500px;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 4px solid rgb(255, 255, 255, 0.2);
+}
+
+header img{
+    width: 80px;
+    margin: 10px auto 2px auto;
+}
+
+.navigation{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    top: -1000px;
+    z-index: 200;
+    background: white;
+    padding: 40px;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.4s ease;
+}
+
+.navigation.active{
+    top: 0;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px rgb(223, 216, 216) solid;
+    text-align: center;
+    padding: 20px 5px;
+}
+
+.navigation a:hover{
+    color: rgb(201, 134, 134);
+}
+
+.hamburger-span{
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: white;
+    margin: 5px auto;
+}
+
+.hamburger{
+    margin: 20px 10px 0 0;
+    cursor: pointer;
+}
+
+.icon-x {
+  width: 28px;
+  height: 28px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.menu-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black; 
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.menu-close.active{
+    display: block;
+}
+
+
+
+/*Body*/
+
+.h-one{
+    margin: 0 auto;
+    padding: 30px 5px;
+}
+
+.h-one h1, .h-one p{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.card-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+    cursor: pointer;
+    filter: brightness(100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.card-container:hover{
+    filter: brightness(70%);
+}
+
+.text-container:hover{
+    background: black;
+    color: white;
+}
+
+.img-container{
+    width: 100%;
+}
+
+.img-container img{
+    width: 100%;
+}
+
+.text-container{
+    text-align: center;
+    padding: 20px 0;
+    background: white;
+    color: black;
+}
+
+.text-container h3, .text-container p{
+    margin-top: 8px;
+}
+
+
+.link, .link:visited{
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+}
+
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  display: none; 
+}
+
+#scrollTopBtn:hover {
+  transform: translateY(-5px);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+footer{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.about-main h2{
+    text-align: center;
+    margin: 60px auto 30px auto;
+}
+
+.pic-art{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.image-container{
+    width: 90%;
+}
+
+.image-container img{
+    width: 100%;
+}
+
+.pic-art article{
+    width: 90%;
+}
+
+.pic-art article p{
+    width: 100%;
+    padding: 25px 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 25px;
+    font-weight: 100;
+}
+
+
+
+
+@media (min-width: 1100px) {
+    .card-container {
+        flex-direction: row;
+    }
+
+    .img-container{
+        width: 60%;
+    }
+    .text-container {
+        width: 40%;
+    }
+
+    .text-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    header{
+        padding-right: 400px;
+    }
+
+    header img{
+        width: 120px;
+        margin-left: -40px;
+    }
+
+    .navigation {
+        position: static;
+        transform: translateY(0);
+        height: auto;
+        flex-direction: row;
+        background: transparent;
+        padding: 0;
+        width: auto;
+        order: -1;
+        margin-left: 80px;
+    }
+
+    .navigation a {
+        color: white;
+        border-bottom: none;
+        padding: 20px;
+    }
+
+    #scrollTopbtn{
+        display: block;
+    }
+
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 50px auto;
+    justify-content: center;
+}
+
+.socials a img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: white;
+    transition: all 0.3s ease;
+    padding: 5px;
+}
+
+.socials a img:hover{
+    transform: scale(1.1);
+}
+
+@media(min-width:800px) {
+    .pic-art{
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+    }
+
+    .image-container{
+        width: 80%;
+    }
+}
+
+
+
+
+
+
+
