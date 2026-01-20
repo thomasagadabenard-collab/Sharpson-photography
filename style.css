@@ -305,6 +305,62 @@ footer{
     }
 }
 
+/*Contact*/
+
+.contact-main{
+    color: white;
+    width: 90%;
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.inp{
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+}
+
+.inp input{
+    padding: 10px;
+}
+
+.inp label{
+    margin-bottom: 5px;
+}
+
+#text-area{
+    padding: 10px;
+}
+
+#submit button{
+    width: 100%;
+    padding: 8px 0;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#submit button:hover{
+    background: black;
+    color: white;
+}
+
+#submit button:active{
+    opacity: 0.4;
+}
+
+.inp-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.para{
+    display: none;
+    color: red;
+}
+
+.para.active{
+    display: block;
+}
 
 
 

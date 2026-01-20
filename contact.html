@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About || Sharpson photography</title>
+    <title>Contact || Sharpson photography</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
@@ -32,29 +32,37 @@
         </div>
     </header>
 
-    <main class="about-main">
+    <main class="contact-main">
 
-        <h2>About</h2>
-
-        <section class="pic-art">
-            <div class="image-container">
-                <img src="images/Screenshot (901).png" alt="picture of Isaac Benard">
+        <form action="submit" id="submit">
+            <div class="inp">
+                <div class="inp-flex">
+                    <label for="">Name</label>
+                    <p class="para">Name can not be empty</p>
+                </div>
+                <input type="text" placeholder="Name" class="name-inp fields">
             </div>
-            <article>
-                <p>
-                    Nosa Asemota is a Nigerian documentary photographer and storyteller, currently serving as the official photographer to the President of Nigeria. With a background in guidance and counseling, Nosa brings a unique, empathetic approach to his work, capturing authentic narratives that reveal the humanity behind his subjects. As the founder of Lens for Good, an initiative dedicated to empowering young Nigerian creatives, he mentors emerging storytellers to use visual media as a tool for social impact. Nosa’s work is driven by a commitment to amplify African voices and bridge cultural divides, with a vision of inspiring change through powerful, relatable storytelling.
-                </p>
-            </article>
-        </section>
 
-        <section class="socials">
-            <a href="instagram.com"><img src="images/instagram-brands-solid-full.svg" alt="instagram logo"></a>
+            <div class="inp">
+                <div class="inp-flex">
+                    <label for="">Email</label>
+                    <p class="para">Email can not be empty</p>
+                </div>
+                <input type="email" placeholder="Email" class="email-inp fields">
+            </div>
 
-            <a href="facebook.com"><img src="images/facebook-brands-solid-full.svg" alt="facebook logo"></a>
+            <div class="inp">
+                <div class="inp-flex">
+                    <label for="">Comment</label>
+                    <p class="para">Comment can not be empty</p>
+                </div>
+                <textarea name="Comment" id="text-area" class="fields" placeholder="Message" rows="10"></textarea>
+            </div>
 
-            <a href="x.com"><img src="images/x-twitter-brands-solid-full.svg" alt="x logo"></a>
-            
-        </section>
+            <button class="submit-btn">Submit</button>
+        </form>
+
+                
         
     </main>
 

@@ -28,3 +28,38 @@ if (window.scrollY > 200) {
 scrollBtn.addEventListener('click', () => {
 window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+
+let submitBtn = document.querySelector(".submit-btn");
+let nameInp = document.querySelector(".name-inp");
+let emailInp = document.querySelector(".email-inp");
+let textArea = document.querySelector("#text-area");
+let paras = document.querySelectorAll(".para");
+
+submitBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    let hasError = false;
+
+    // Reset errors
+    paras.forEach(p => p.classList.remove("active"));
+
+    if (nameInp.value.trim() === "") {
+        paras[0].classList.add("active");
+        hasError = true;
+    }
+
+    if (emailInp.value.trim() === "") {
+        paras[1].classList.add("active");
+        hasError = true;
+    }
+
+    if (textArea.value.trim() === "") {
+        paras[2].classList.add("active");
+        hasError = true;
+    }
+
+    if (!hasError) {
+        console.log("Form submitted!");
+    }
+});
