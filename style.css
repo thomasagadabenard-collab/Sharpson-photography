@@ -9,7 +9,7 @@ body{
     background: black;
     color: white;
     max-width: 1500px;
-    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 h1, h2, h3 {
@@ -106,7 +106,7 @@ header img{
 
 .h-one h1, .h-one p{
     text-align: center;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
 .card-container{
@@ -205,7 +205,7 @@ footer{
 .pic-art article p{
     width: 100%;
     padding: 25px 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
     line-height: 25px;
     font-weight: 100;
@@ -413,4 +413,28 @@ footer{
         display: grid;
         margin-top: 30px;
     }
+}
+
+.complete-icon{
+    width: 15px;
+    padding-bottom: 10px;
+    display: none;
+}
+
+.complete-icon.active{
+    display: inline-block;
+}
+
+.email-phone{
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.email-phone p, .email-phone h4{
+    margin-bottom: 8px;
+}
+
+.email-phone p span {
+    font-size: 1.5rem;
 }
