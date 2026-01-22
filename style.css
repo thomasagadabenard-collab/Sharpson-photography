@@ -21,6 +21,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 4px solid rgb(255, 255, 255, 0.2);
+    max-width: 1500px;
 }
 
 header img{
@@ -362,8 +363,51 @@ footer{
     display: block;
 }
 
+/*Galleries*/
+
+.div-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 30px auto;
+    background: white;
+    padding: 100px;
+}
 
 
 
 
+.photo{
+    width: 100%;
+    height: 100%;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
 
+
+.photo:hover{
+    transform: scale(1.1);
+}
+
+@media(min-width:600px){
+    .photos-container-two{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .photos-container-three{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .photos-container-one{
+        display: grid;
+        margin-top: 30px;
+    }
+}

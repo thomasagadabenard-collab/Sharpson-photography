@@ -41,7 +41,6 @@ submitBtn.addEventListener("click", (e) => {
 
     let hasError = false;
 
-    // Reset errors
     paras.forEach(p => p.classList.remove("active"));
 
     if (nameInp.value.trim() === "") {
