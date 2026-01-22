@@ -435,6 +435,15 @@ footer{
     margin-bottom: 8px;
 }
 
+.email-phone h4{
+    color: rgb(201, 134, 134);
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
 .email-phone p span {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    color: rgb(201, 134, 134);
+    font-weight: 800;
 }
