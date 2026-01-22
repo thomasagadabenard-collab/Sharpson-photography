@@ -373,7 +373,7 @@ footer{
     width: 90%;
     margin: 30px auto;
     background: white;
-    padding: 100px;
+    padding: 40px;
 }
 
 
@@ -392,6 +392,9 @@ footer{
 }
 
 @media(min-width:600px){
+    .div-container{
+        padding: 100px;
+    }
     .photos-container-two{
         display: grid;
         grid-template-columns: 1fr 1fr;
