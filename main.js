@@ -83,3 +83,131 @@ textArea.addEventListener("input", () => {
     icons[2].classList.toggle("active", textArea.value.trim() !== "");
 });
 
+
+const form = document.querySelector("#submit");
+
+const nameInput = document.querySelector(".name-inp");
+const emailInput = document.querySelector(".email-inp");
+const commentInput = document.querySelector("#text-area");
+
+const fields = document.querySelectorAll(".fields");
+
+
+/*VALIDATION FUNCTIONS*/
+
+function validateName() {
+    const errorMessage = nameInput
+        .parentElement
+        .querySelector(".para");
+
+    const completeIcon = nameInput
+        .parentElement
+        .querySelector(".complete-icon");
+
+    if (nameInput.value.trim() === "") {
+        errorMessage.classList.add("active");
+        completeIcon.classList.remove("active");
+
+        return false;
+    }
+
+    errorMessage.classList.remove("active");
+    completeIcon.classList.add("active");
+
+    return true;
+}
+
+
+function validateEmail() {
+    const errorMessage = emailInput
+        .parentElement
+        .querySelector(".para");
+
+    const completeIcon = emailInput
+        .parentElement
+        .querySelector(".complete-icon");
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailInput.value.trim() === "") {
+        errorMessage.textContent = "Email can not be empty";
+        errorMessage.classList.add("active");
+        completeIcon.classList.remove("active");
+
+        return false;
+    }
+
+    if (!emailPattern.test(emailInput.value.trim())) {
+        errorMessage.textContent = "Please enter a valid email";
+        errorMessage.classList.add("active");
+        completeIcon.classList.remove("active");
+
+        return false;
+    }
+
+    errorMessage.classList.remove("active");
+    completeIcon.classList.add("active");
+
+    return true;
+}
+
+
+function validateComment() {
+    const errorMessage = commentInput
+        .parentElement
+        .querySelector(".para");
+
+    const completeIcon = commentInput
+        .parentElement
+        .querySelector(".complete-icon");
+
+    if (commentInput.value.trim() === "") {
+        errorMessage.classList.add("active");
+        completeIcon.classList.remove("active");
+
+        return false;
+    }
+
+    errorMessage.classList.remove("active");
+    completeIcon.classList.add("active");
+
+    return true;
+}
+
+
+form.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    const nameIsValid = validateName();
+    const emailIsValid = validateEmail();
+    const commentIsValid = validateComment();
+
+    if (
+        nameIsValid &&
+        emailIsValid &&
+        commentIsValid
+    ) {
+        console.log("Form is valid!");
+
+        // Your form can be submitted here
+        // form.submit();
+
+        alert("Message sent successfully!");
+
+        form.reset();
+
+        document
+            .querySelectorAll(".complete-icon")
+            .forEach(icon => {
+                icon.classList.remove("active");
+            });
+    }
+});
+
+
+nameInput.addEventListener("input", validateName);
+
+emailInput.addEventListener("input", validateEmail);
+
+commentInput.addEventListener("input", validateComment);

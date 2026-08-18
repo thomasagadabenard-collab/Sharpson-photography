@@ -9,11 +9,13 @@ body{
     background: black;
     color: white;
     max-width: 1500px;
-    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
 }
 
 h1, h2, h3 {
-  font-family: "Playfair Display", serif;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
 }
 
 header{
@@ -308,59 +310,240 @@ footer{
 
 /*Contact*/
 
-.contact-main{
-    color: white;
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-main {
     width: 90%;
-    max-width: 500px;
-    margin: 40px auto;
+    max-width: 700px;
+    margin: 70px auto 100px;
+    color: white;
 }
 
-.inp{
+/* Contact form */
+
+#submit {
+    background: #111;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Individual form fields */
+
+.inp {
     display: flex;
     flex-direction: column;
-    margin-top: 12px;
+    margin-bottom: 28px;
 }
 
-.inp input{
-    padding: 10px;
+/* Label + validation message */
+
+.inp-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    min-height: 25px;
 }
 
-.inp label{
-    margin-bottom: 5px;
+.inp label {
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #ddd;
 }
 
-#text-area{
-    padding: 10px;
-}
+/* Inputs */
 
-#submit button{
+.inp input,
+#text-area {
     width: 100%;
-    padding: 8px 0;
     margin-top: 10px;
-    cursor: pointer;
+    padding: 15px;
+    background: transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
 
-#submit button:hover{
-    background: black;
+/* Textarea */
+
+#text-area {
+    resize: vertical;
+    min-height: 150px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Placeholder */
+
+.inp input::placeholder,
+#text-area::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Focus */
+
+.inp input:focus {
+    border-bottom-color: white;
+}
+
+#text-area:focus {
+    border-color: white;
+}
+
+/* Submit button */
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    background: white;
+    color: black;
+    border: 1px solid white;
+    cursor: pointer;
+
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: transparent;
     color: white;
 }
 
-#submit button:active{
-    opacity: 0.4;
+.submit-btn:active {
+    transform: scale(0.98);
 }
 
-.inp-flex{
-    display: flex;
-    justify-content: space-between;
-}
+/* Validation message */
 
-.para{
+.para {
     display: none;
-    color: red;
+    margin: 0;
+    color: #c98686;
+    font-family: "Inter", sans-serif;
+    font-size: 0.75rem;
 }
 
-.para.active{
+.para.active {
     display: block;
+}
+
+/* Completed icon */
+
+.complete-icon {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    display: none;
+}
+
+.complete-icon.active {
+    display: inline-block;
+}
+
+
+/* =========================
+   ALTERNATIVE CONTACT
+========================= */
+
+.email-phone {
+    margin: 70px auto 0;
+    padding-top: 40px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.email-phone h4 {
+    margin-bottom: 25px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.email-phone p {
+    margin-bottom: 12px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    color: #ccc;
+}
+
+.email-phone p span {
+    color: #c98686;
+    font-weight: 500;
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 700px) {
+
+    .contact-main {
+        margin-top: 100px;
+    }
+
+    #submit {
+        padding: 55px;
+    }
+
+    .inp {
+        margin-bottom: 35px;
+    }
+
+    .email-phone {
+        margin-top: 90px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .contact-main {
+        width: 92%;
+        margin-top: 50px;
+    }
+
+    #submit {
+        padding: 25px 20px;
+    }
+
+    .inp-flex {
+        align-items: flex-start;
+    }
+
+    .para {
+        text-align: right;
+    }
+
+    .email-phone {
+        margin-top: 60px;
+    }
+
+    .email-phone h4 {
+        font-size: 1.5rem;
+    }
 }
 
 /*Galleries*/
